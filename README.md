@@ -1,22 +1,44 @@
-# “Designing for Conversion”
+# Designing for Conversion
 
-**45 Minutes Total**
-**Pairs (2 students per team)**
+**Project Link:**
+[https://github.com/knee-rel/css_work](https://github.com/knee-rel/css_work)
 
 ---
 
-# 🎯 Learning Goals
+# Learning Goals
 
 By the end of this activity, pairs should be able to:
 
-1. Apply CSS fundamentals (selectors, box model, flexbox)
-2. Improve visual hierarchy of a product page
-3. Connect layout decisions to business metrics
-4. Explain at least one technical decision strategically
+* Apply CSS fundamentals (selectors, box model, flexbox)
+* Improve the visual hierarchy of a product page
+* Connect layout decisions to business metrics
+* Explain at least one technical decision strategically
 
 ---
 
-# 🎞 SLIDE 1 – Activity Introduction
+## Generative AI Policy
+
+The use of Generative AI to augment work is tolerated **as long as there is clear understanding of the design decisions suggested by AI**.
+
+* There are **no deductions** for using AI.
+* However, you **must honestly identify** AI assistance.
+
+### Requirement
+
+Create a file named:
+
+```
+AIUsage.md
+```
+
+Inside, briefly state:
+
+* Which parts were AI-assisted
+* What you modified or verified yourself
+
+---
+
+# Activity Introduction
 
 ## You Are the Front-End Team
 
@@ -28,54 +50,51 @@ They say:
 > Our Add-to-Cart rate is low.
 > Improve it.”
 
-You may NOT change the HTML structure.
+---
 
-You may ONLY use CSS.
+## Constraint
+
+You may **NOT**:
+
+* Change the HTML structure
+
+You may **ONLY**:
+
+* Use CSS
 
 ---
 
-# Pair Roles (Important)
-
-Each pair assigns roles:
-
-### Builder
-
-* Writes CSS
-* Implements changes
-
-### Strategist
-
-* Justifies decisions
-* Connects layout to business metrics
-* Prepares for mini reflection
-
-They may switch halfway if desired. This ensures both tech + management engagement.
+# Challenge Structure
 
 ---
 
-# 🟦 The Challenge Structure
+## Layer 1 – Required
+
+All pairs must complete the following.
 
 ---
 
-# 🟢 Layer 1 – Required
+### Task 1: Center the Product Card
 
-All pairs must complete:
-
-### 1. Center the product card
-
-* Horizontally centered on page
+* Horizontally centered on the page
 * Balanced spacing
 
-### 2. Use Flexbox
+---
 
-* Image and text side by side (desktop view)
+### Task 2: Use Flexbox
 
-### 3. Improve spacing
+* Image and text side-by-side (desktop view)
+
+---
+
+### Task 3: Improve Spacing
 
 * Proper margin and padding
 * Clear separation between sections
 
-### 4. Style the button
+---
+
+### Task 4: Style the Button
 
 * Distinct color
 * Adequate padding
@@ -83,40 +102,33 @@ All pairs must complete:
 
 ---
 
-### Business Reflection Prompt
+# Layer 2 – Intermediate
 
-Pairs must answer in 2–3 sentences:
-
-> What user behavior are you trying to influence with your button styling?
-
-Examples:
-
-* Increase click visibility
-* Improve perceived trust
-* Reduce hesitation
+Proceed after completing Layer 1.
 
 ---
 
-# Layer 2 – Intermediate
-
-After completing Layer 1:
-
-### 5. Add Hover Effect
+### Task 5: Add Hover Effect
 
 * Button changes color on hover
 * Optional subtle scale transform
 
-### 6. Improve Typography
+---
+
+### Task 6: Improve Typography
 
 * Adjust font size hierarchy
 * Make price visually dominant
 
-### 7. Make It Responsive
+---
 
-* Stack image above text on small screens
+### Task 7: Make It Responsive
 
-Hint:
-Use media query:
+On small screens:
+
+* Stack the image above the text
+
+Use:
 
 ```css
 @media (max-width: 768px) {
@@ -126,66 +138,115 @@ Use media query:
 
 ---
 
-### Business Reflection Prompt (Layer 2)
+# Layer 3 – Advanced
 
-> Why is mobile responsiveness critical for e-commerce revenue?
-
-Expected:
-
-* Majority of traffic is mobile
-* Poor mobile UX increases bounce rate
+**(Optional for Non-MIS, Required for MIS)**
 
 ---
 
-# Layer 3 – Advanced (Hi, MIS people. Your challenge is to bypass this stage) (Optional)
-
-### 8. Refactor CSS
+## Task 8: Refactor CSS
 
 * Remove duplicate styles
 * Use reusable classes
 * Improve structure
 
-### 9. Inspect with DevTools
+---
 
-* Check box model
-* Check computed styles
+## Refactor Requirements
 
-### 10. Answer This:
+### 1. Remove Obvious Duplication
 
-> What CSS changes could trigger layout recalculation (reflow)?
+Focus on:
 
-Guide toward:
-
-* Changing width
-* Changing display
-* Changing font size
+* Repeated spacing values
+* Repeated colors
+* Repeated border-radius or shadows
 
 ---
 
-# 🟦 Guide Questions
+### 2. Ensure Selectors are Reusable
 
-### 🔵 Technical
+Focus on:
 
-* Why did you choose that spacing?
-* Why flexbox instead of margin hacks?
-* Why that color contrast?
+* Using class selectors for components
+* Avoid overly specific selectors
+* Avoid `!important`
 
-### 💼 Business
+Ask yourself:
 
-* Which metric improves because of this change?
-* What happens if the CTA blends into the background?
-* How does spacing affect perceived brand quality?
-
-Push them to think beyond “it looks nice.”
+> If there were 30 product cards instead of 3, would my CSS still work cleanly?
 
 ---
 
-# 🎞 SLIDE – Mini Presentation Prompt
+### 3. Basic File Organization
 
-Each pair answers, in 3-5 sentences:
+Requirements:
 
-1. What visual change had the biggest impact?
-2. What business metric were you targeting?
-3. What technical concept enabled that change?
+* Related rules are grouped together
+* Hover states are near their base styles
+* Media query is placed at the bottom
+
+---
+
+# Guide Questions for Reflection
+
+Answer all questions. Be specific and connect your technical choices to user behavior and business impact.
+
+---
+
+## Technical Reflection
+
+### Layout and Structure
+
+What key layout problem were you solving, and why was Flexbox the most appropriate solution for this product grid and card layout?
+
+---
+
+### Visual Hierarchy and Spacing
+
+Which single CSS change most improved readability or scannability (spacing, typography, or price emphasis)? Explain how it affects user attention.
+
+---
+
+### Interaction Design
+
+How does your button styling and hover effect communicate that the element is clickable? What risk would occur if the CTA were less visually distinct?
+
+---
+
+### Responsiveness and Robustness
+
+What specifically changes at the mobile breakpoint, and how does your solution ensure the layout still works if more products are added?
+
+---
+
+### For MIS Only
+
+What specifically changes at the mobile breakpoint, and how does your solution ensure the layout still works if more products are added?
+
+---
+
+## Business Reflection
+
+### Conversion Impact
+
+Which user behavior were you primarily trying to influence (for example: faster scanning, increased trust, more clicks)? Explain how your design supports this.
+
+---
+
+### Revenue and Risk Thinking
+
+If the Add-to-Cart rate did not improve after your redesign, what would you test or change first, and why?
+
+---
+
+# Response Guidelines
+
+* Your full reflection should be **300–400 words**
+* Format your submission using:
+
+  * **Font:** Times New Roman
+  * **Size:** 11 pt
+  * **Line spacing:** 1.15
 
 ---
