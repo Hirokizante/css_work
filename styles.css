@@ -1,1 +1,110 @@
-/* Write your CSS here */
+/* ===== Reset & Base ===== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* ===== Product Card ===== */
+
+.product-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 640px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 1.5rem;
+}
+
+.product-card img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* ===== Product Details ===== */
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.product-details h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e63946;
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+/* ===== Button & Hover ===== */
+
+.buy-btn {
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.buy-btn:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.05);
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 768px) {
+  .product-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .product-details {
+    align-items: center;
+  }
+
+  .buy-btn {
+    align-self: center;
+  }
+}
